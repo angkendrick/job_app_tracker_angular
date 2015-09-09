@@ -1,9 +1,43 @@
-<ul ng-repeat="application in applications">
-  <li>Title: {{application.title}}</li>
-  <li>Company: {{application.company}}</li>
-  <li>Description: {{application.description}}</li>
-  <li>URL: {{application.url}}</li>
-  <li>Contact Name: {{application.contact_name}}</li>
-  <li>Contact Phone: {{application.contact_phone}}</li>
-  <li>Contact Email: {{application.contact_email}}</li>
-</ul>
+<div class="col-md-4">
+  <button>New Application</button>
+</div>
+
+<div class="col-md-8">
+  <div class="row">
+    <div class="col-md-10">
+
+      <div ng-repeat="application in applications">
+        <div class="row">
+          <div class="col-md-4">Title</div>
+          <div class="col-md-8">{{application.title}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Company</div>
+          <div class="col-md-8">{{application.company}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Description</div>
+          <div class="col-md-8">{{application.description}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">URL</div>
+          <div class="col-md-8">{{application.url}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Contact Person</div>
+          <div class="col-md-8">{{application.contact_name}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Contact Phone</div>
+          <div class="col-md-8">{{application.contact_phone}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Contact Email</div>
+          <div class="col-md-8">{{application.contact_email}}</div>
+        </div>
+        <hr>
+      </div>
+
+    </div>
+  </div>
+</div>
