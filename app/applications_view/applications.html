@@ -1,2 +1,9 @@
-<h1>Hi!</h1>
-
+<ul ng-repeat="application in applications">
+  <li>Title: {{application.title}}</li>
+  <li>Company: {{application.company}}</li>
+  <li>Description: {{application.description}}</li>
+  <li>URL: {{application.url}}</li>
+  <li>Contact Name: {{application.contact_name}}</li>
+  <li>Contact Phone: {{application.contact_phone}}</li>
+  <li>Contact Email: {{application.contact_email}}</li>
+</ul>

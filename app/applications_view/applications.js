@@ -14,6 +14,7 @@ app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/applications', {
     templateUrl: 'applications_view/applications.html',
     controller: 'ApplicationsCtrl',
+    controllerAs: 'applications',
     resolve: {
       applications: function(ApplicationsService){
         return ApplicationsService.query().$promise;
@@ -24,5 +25,5 @@ app.config(['$routeProvider', function($routeProvider) {
 
 app.controller('ApplicationsCtrl', function(applications) {
   console.log(applications);
-  this.applications = applications
+  return applications;
 });
