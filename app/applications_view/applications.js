@@ -31,10 +31,29 @@ app.controller('ApplicationsCtrl', function(applications) {
 
 var newApplication = angular.module('myApp.newApplication', []);
 
-newApplication.controller('NewAppCtrl', function ($scope) {
+newApplication.controller('NewAppCtrl', function ($scope, $http) {
   $scope.showModal = false;
   $scope.toggleModal = function(){
     $scope.showModal = !$scope.showModal;
+  };
+  $scope.formData = {};
+  $scope.processForm = function() {
+    $http({
+      method:   'POST',
+      url:      'http://localhost:3000/applications',
+      data:     $.param({application: $scope.formData}),
+      headers:  { 'Content-Type' : 'application/x-www-form-urlencoded'}
+    })
+        .success(function(data){
+          console.log(data);
+        })
+        .error(function(data){
+          console.log(data);
+          $scope.errorTitle = data.errors.title;
+          $scope.errorCompany = data.errors.company;
+          $scope.errorDescription = data.errors.description;
+          $scope.errorUrl = data.errors.url;
+        });
   };
 });
 
