@@ -1,3 +1,13 @@
 /* app css stylesheet */
 
-body { padding-top: 70px; }
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  padding-top: 70px;
+  padding-left: 50px;
+}
+
+.appFormat {
+  font-size: 16px;
+  line-height: 1.9;
+}
