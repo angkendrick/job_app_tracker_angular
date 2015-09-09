@@ -910,7 +910,7 @@ angular.mock.dump = function(object) {
  * @ngdoc service
  * @name $httpBackend
  * @description
- * Fake HTTP backend implementation suitable for unit testing applications that use the
+ * Fake HTTP backend implementation suitable for unit testing applications_view that use the
  * {@link ng.$http $http service}.
  *
  * *Note*: For fake HTTP backend implementation suitable for end-to-end testing or backend-less
@@ -1923,7 +1923,7 @@ angular.module('ngMockE2E', ['ng']).config(['$provide', function($provide) {
  * @module ngMockE2E
  * @description
  * Fake HTTP backend implementation suitable for end-to-end testing or backend-less development of
- * applications that use the {@link ng.$http $http service}.
+ * applications_view that use the {@link ng.$http $http service}.
  *
  * *Note*: For fake http backend implementation suitable for unit testing please see
  * {@link ngMock.$httpBackend unit-testing $httpBackend mock}.
