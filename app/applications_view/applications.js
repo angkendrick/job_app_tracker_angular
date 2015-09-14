@@ -4,6 +4,7 @@
 
 'use strict';
 
+// MAIN
 var app = angular.module('myApp.applications', ['ngRoute', 'ngResource'])
 
 app.factory('ApplicationsService', function($resource) {
@@ -29,13 +30,15 @@ app.controller('ApplicationsCtrl', function(applications) {
 });
 
 
+// NEW APPLICATION POP-UP
 var newApplication = angular.module('myApp.newApplication', []);
 
 newApplication.controller('NewAppCtrl', function ($scope, $http) {
-  $scope.showModal = false;
-  $scope.toggleModal = function(){
-    $scope.showModal = !$scope.showModal;
+  $scope.showPopup = false;
+  $scope.toggleShowPopup = function(){
+    $scope.showPopup = !$scope.showPopup;
   };
+  // FORM SUBMIT
   $scope.formData = {};
   $scope.processForm = function() {
     $http({

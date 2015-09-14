@@ -1,8 +1,7 @@
 <div ng-controller="NewAppCtrl" class="col-md-4">
-  <button ng-click="toggleModal()" class="btn btn-primary">New Application</button>
 
-
-  <modal title="New Application" visible="showModal">
+  <button ng-click="toggleShowPopup()" class="btn btn-primary">New Application</button>
+  <modal title="New Application" visible="showPopup">
     <form ng-submit="processForm()" role="form">
       <div ng-class="{ 'has-error' : errorTitle }" class="form-group">
         <label>Title</label>
